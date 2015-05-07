@@ -1,0 +1,56 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="js/mailcheck.min.js"></script>
+<link href="jquery-ui.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+	
+</head>
+<body>
+<div id="">
+<label>Email:</label>
+<input type="email" id="email" name="email"/>
+
+<input type="submit"  name="submit"/>
+<span id="suggestion"/>
+</div>
+
+<!-- Datepicker -->
+<h2 class="demoHeaders">Datepicker</h2>
+<input id="datepicker" type="text" />
+
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script>
+var topLevelDomains = ["com", "net", "org","in","edu"];
+var domains = ['hotmail.com', 'gmail.com', 'yahoo.com','rediffmail.com','dce.edu','dce.ac.in'];
+
+$( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true});
+
+
+$('#email').on('blur', function() {
+  $(this).mailcheck({
+    domains: domains,                       // optional
+    topLevelDomains: topLevelDomains,       // optional
+    suggested: function(element, suggestion) {
+      // callback code
+	     $('#suggestion').html("Did you mean <b><i>" + suggestion.full + "</b></i>?");
+
+    },
+    empty: function(element) {
+      // callback code
+	        $('#suggestion').html('No Suggestions :(');
+
+    }
+  });
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+<link rel="stylesheet" type="text/css" href="rec.css">
+
+<script type="text/javascript">
+var c=5;
+
+function goright()
+{
+setTimeout(function()
+{
+var obj=document.getElementById("g");
+	obj.style.position="relative";
+	obj.style.left=c+"%";
+	c=c+1;
+	if(c<100)goright();
+
+},50);
+}
+</script>
+<body onload="goright()">
+<p class="aa" id="g">
+
+</body>
+
+</html>

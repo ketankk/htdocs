@@ -1,0 +1,26 @@
+.links{
+background-color:#339933;
+margin-left:20%;
+margin-top:10%;
+size:20px;
+width:600px;
+height:30px;
+border: 1px solid black;
+border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+	padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+	border-radius:25px;
+}
+a{
+color:#CCCC00;
+padding:10px;
+padding-top:10px;
+size:200px;
+margin:20px;
+
+}
